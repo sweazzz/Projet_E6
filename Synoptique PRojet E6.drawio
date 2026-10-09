@@ -1,0 +1,64 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0">
+  <diagram name="Page-1" id="nm5haN4ItBpVMF_zp-th">
+    <mxGraphModel dx="1600" dy="874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;" value="Synoptique : gestion de stock IT avec scanette ESP32-CAM" vertex="1">
+          <mxGeometry height="30" width="700" x="349.94" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="&lt;b&gt;ESP32-CAM&lt;/b&gt;&lt;br&gt;(scanette)&lt;br&gt;&lt;br&gt;Caméra : lecture code-barres / QR&lt;br&gt;LED / buzzer : confirmation" vertex="1">
+          <mxGeometry height="130" width="220" x="189.94" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;align=left;spacingLeft=14;" value="&lt;b&gt;Serveur web&lt;/b&gt;&lt;br&gt;(PHP / Node / Python)&lt;br&gt;&lt;br&gt;- Authentification (rôles)&lt;br&gt;- API de gestion du stock&lt;br&gt;- Logique d&#39;alerte stock bas&lt;br&gt;- Export CSV / Excel" vertex="1">
+          <mxGeometry height="170" width="270" x="549.94" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-4" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" value="&lt;b&gt;Base de données SQL&lt;/b&gt;&lt;br&gt;(MySQL)&lt;br&gt;&lt;br&gt;utilisateurs, articles,&lt;br&gt;mouvements" vertex="1">
+          <mxGeometry height="140" width="220" x="574.94" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;" value="&lt;b&gt;Alerte stock bas&lt;/b&gt;&lt;br&gt;&lt;br&gt;E-mail (SMTP)&lt;br&gt;Bandeau dans l&#39;interface" vertex="1">
+          <mxGeometry height="130" width="220" x="959.94" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;" value="&lt;b&gt;Interface web&lt;/b&gt;&lt;br&gt;(navigateur)&lt;br&gt;&lt;br&gt;Login, stock, recherche,&lt;br&gt;historique, tableau de bord" vertex="1">
+          <mxGeometry height="140" width="220" x="189.94" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-7" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;" value="Équipe IT&lt;br&gt;(admin / technicien)" vertex="1">
+          <mxGeometry height="70" width="60" x="269.94" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-8" edge="1" parent="1" source="nmEusM2cwuHAJL5WJQgC-2" style="endArrow=classic;html=1;strokeWidth=2;fontSize=12;exitX=1;exitY=0.35;entryX=0;entryY=0.35;" target="nmEusM2cwuHAJL5WJQgC-3" value="Wi-Fi / HTTP&lt;br&gt;code scanné">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-9" edge="1" parent="1" source="nmEusM2cwuHAJL5WJQgC-3" style="endArrow=classic;html=1;strokeWidth=2;dashed=1;fontSize=12;exitX=0;exitY=0.75;entryX=1;entryY=0.75;" target="nmEusM2cwuHAJL5WJQgC-2" value="confirmation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-10" edge="1" parent="1" source="nmEusM2cwuHAJL5WJQgC-3" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;fontSize=12;" target="nmEusM2cwuHAJL5WJQgC-4" value="requêtes SQL">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-11" edge="1" parent="1" source="nmEusM2cwuHAJL5WJQgC-3" style="endArrow=classic;html=1;strokeWidth=2;fontSize=12;" target="nmEusM2cwuHAJL5WJQgC-5" value="si quantité &amp;lt; seuil">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-12" edge="1" parent="1" source="nmEusM2cwuHAJL5WJQgC-6" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;fontSize=12;" target="nmEusM2cwuHAJL5WJQgC-3" value="HTTP(S)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-13" edge="1" parent="1" source="nmEusM2cwuHAJL5WJQgC-7" style="endArrow=classic;html=1;strokeWidth=2;fontSize=12;" target="nmEusM2cwuHAJL5WJQgC-6" value="utilise">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-14" edge="1" parent="1" source="nmEusM2cwuHAJL5WJQgC-7" style="endArrow=classic;html=1;strokeWidth=2;fontSize=12;dashed=1;edgeStyle=orthogonalEdgeStyle;" target="nmEusM2cwuHAJL5WJQgC-2" value="utilise">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="159.94" y="805" />
+              <mxPoint x="159.94" y="375" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nmEusM2cwuHAJL5WJQgC-15" edge="1" parent="1" source="nmEusM2cwuHAJL5WJQgC-5" style="endArrow=classic;html=1;strokeWidth=2;fontSize=12;dashed=1;edgeStyle=orthogonalEdgeStyle;" target="nmEusM2cwuHAJL5WJQgC-7" value="notification">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1069.94" y="805" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
